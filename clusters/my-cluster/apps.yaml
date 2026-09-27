@@ -1,0 +1,24 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: cluster-apps
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://github.com/mwvjk/homelab-00.git
+  ref:
+    branch: main
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: cluster-apps
+  namespace: flux-system
+spec:
+  interval: 5m
+  targetNamespace: default
+  sourceRef:
+    kind: GitRepository
+    name: cluster-apps
+  path: "./apps"
+  prune: true 
