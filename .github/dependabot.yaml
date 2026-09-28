@@ -1,0 +1,7 @@
+version: 2
+updates:
+  # Monitor Docker image tags inside Kubernetes manifests
+  - package-ecosystem: "docker"
+    directory: "/apps/"
+    schedule:
+      interval: "daily"
