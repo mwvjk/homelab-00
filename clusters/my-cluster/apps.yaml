@@ -7,7 +7,7 @@ spec:
   interval: 5m
   sourceRef:
     kind: GitRepository
-    name: cluster-apps
+    name: flux-system
   path: "./apps"
   prune: true
   wait: true
