@@ -2,6 +2,6 @@ version: 2
 updates:
   # Monitor Docker image tags inside Kubernetes manifests
   - package-ecosystem: "docker"
-    directory: "/apps/"
+    directory: "/apps/fitness-app"
     schedule:
       interval: "daily"
