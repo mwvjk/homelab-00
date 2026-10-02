@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: fitness-app
-          image: ghcr.io/mwvjk/fitness-app:v0.2.1
+          image: ghcr.io/mwvjk/fitness-app:v1.0.0
           ports:
             - containerPort: 8000
           readinessProbe:
